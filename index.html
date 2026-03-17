@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Leave Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Faculty Leave Management</h1>
+        <form id="leaveForm">
+            <div class="form-group">
+                <label for="name">Faculty Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <input type="text" id="department" required>
+            </div>
+            <div class="form-group">
+                <label for="leaveType">Leave Type:</label>
+                <select id="leaveType" required>
+                    <option value="">Select Leave Type</option>
+                    <option value="sick">Sick Leave</option>
+                    <option value="casual">Casual Leave</option>
+                    <option value="earned">Earned Leave</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" required>
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason:</label>
+                <textarea id="reason" rows="3" required></textarea>
+            </div>
+            <button type="submit">Submit Leave</button>
+        </form>
+
+        <div class="leave-status">
+            <h2>Leave Status</h2>
+            <div id="statusList"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
